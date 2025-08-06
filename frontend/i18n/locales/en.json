@@ -1,0 +1,354 @@
+{
+  "common": {
+    "search": "Search",
+    "loading": "Loading...",
+    "error": "Error",
+    "close": "Close",
+    "open": "Open",
+    "menu": "Menu",
+    "home": "Home",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "view": "View",
+    "details": "Details",
+    "more": "More",
+    "less": "Less",
+    "all": "All",
+    "none": "None",
+    "yes": "Yes",
+    "no": "No",
+    "ok": "OK"
+  },
+  "navigation": {
+    "home": "Home",
+    "search": "Search POS",
+    "chat": "AI Finance Expert",
+    "comparison": "Comparison",
+    "news": "News",
+    "about": "About",
+    "contact": "Contact",
+    "skipToContent": "Skip to content",
+    "mainNavigation": "Main navigation",
+    "breadcrumb": "Breadcrumb"
+  },
+  "header": {
+    "logo": "Go to PAYREAM homepage",
+    "searchButton": "Go to search page",
+    "chatButton": "Chat with AI finance expert",
+    "toggleMobileMenu": "Toggle mobile menu"
+  },
+  "home": {
+    "title": "Turkey's Most Comprehensive Fintech Platform",
+    "subtitle": "Compare POS systems, blockchain technologies and fintech solutions. Find the most suitable financial technology solution with our AI-powered expert.",
+    "searchPlaceholder": "Search POS, blockchain, fintech solutions...",
+    "exploreButton": "Explore Fintech Solutions",
+    "chatButton": "AI Finance Expert",
+    "stats": {
+      "solutions": "Fintech Solutions",
+      "users": "Active Users",
+      "volume": "Daily Transaction Volume",
+      "support": "AI Support"
+    },
+    "features": {
+      "title": "Why PAYREAM?",
+      "subtitle": "All the information you need to make the right decision in the fintech world",
+      "advancedSearch": {
+        "title": "Advanced Search",
+        "description": "Compare POS, blockchain and fintech solutions with detailed filters"
+      },
+      "realTimeData": {
+        "title": "Real-Time Data",
+        "description": "Commission rates, blockchain data and market analysis"
+      },
+      "aiExpert": {
+        "title": "AI Finance Expert",
+        "description": "24/7 AI consulting on blockchain, DeFi and fintech topics"
+      }
+    },
+    "benefits": {
+      "title": "Advantages of Modern Fintech Solutions",
+      "subtitle": "Grow your business with future financial technologies",
+      "blockchainSecurity": {
+        "title": "Blockchain Security",
+        "description": "Maximum protection with decentralized security protocols"
+      },
+      "instantTransactions": {
+        "title": "Instant Transactions",
+        "description": "24/7 instant money transfer with DeFi protocols"
+      },
+      "multiPayment": {
+        "title": "Multi-Payment Support",
+        "description": "Fiat, crypto, NFT and stablecoin payments"
+      },
+      "lowCosts": {
+        "title": "Low Costs",
+        "description": "70% lower transaction fees compared to traditional banking"
+      },
+      "apiFirst": {
+        "title": "API-First Approach",
+        "description": "Easy setup with RESTful API and Web3 integration"
+      },
+      "latestNews": {
+        "title": "Latest News",
+        "description": "Latest developments from the fintech and blockchain world"
+      }
+    },
+    "news": {
+      "title": "Fintech and Blockchain News",
+      "subtitle": "Latest developments from Turkey's financial technology world",
+      "readMore": "Read More",
+      "viewAll": "View All News",
+      "readTime": "min read"
+    },
+    "providers": {
+      "title": "Featured Fintech Solutions",
+      "subtitle": "The most innovative and reliable financial technology providers",
+      "viewDetails": "View Details",
+      "rating": "Rating",
+      "features": "Features",
+      "pricing": "Pricing"
+    },
+    "cta": {
+      "title": "Start Your Fintech Journey",
+      "subtitle": "Finding the most suitable financial technology solution for your business is just a few clicks away",
+      "exploreButton": "Explore Solutions",
+      "chatButton": "Talk to AI Expert"
+    }
+  },
+  "search": {
+    "title": "Search Fintech Solutions",
+    "searchPlaceholder": "Search POS, blockchain, fintech solutions...",
+    "searchButton": "Search",
+    "filters": {
+      "category": "Category",
+      "categoryPlaceholder": "Select category",
+      "allCategories": "All Categories",
+      "sorting": "Sorting",
+      "sortByRating": "By Rating",
+      "sortByCommission": "By Commission",
+      "sortByName": "By Name",
+      "sortByEstablished": "By Establishment Year",
+      "advancedFilters": "Advanced Filters",
+      "minRating": "Minimum Rating",
+      "maxCommission": "Maximum Commission"
+    },
+    "results": {
+      "found": "results found",
+      "noResults": "No results found matching your search criteria.",
+      "searching": "Searching...",
+      "avgRating": "Average rating",
+      "commissionRange": "Commission range"
+    },
+    "provider": {
+      "features": "Features",
+      "pricing": "Pricing",
+      "technicalInfo": "Technical Information",
+      "supportedCards": "Supported Cards",
+      "securityFeatures": "Security Features",
+      "integration": "Integration",
+      "support": "Support",
+      "company": "Company",
+      "setup": "Setup",
+      "monthly": "Monthly",
+      "viewDetails": "View Details"
+    }
+  },
+  "comparison": {
+    "title": "POS Comparison",
+    "subtitle": "Detailed comparison of selected providers",
+    "calculator": {
+      "title": "Cost Calculator",
+      "businessSize": "Business Size",
+      "monthlyVolume": "Monthly Transaction Volume",
+      "averageTransaction": "Average Transaction Amount",
+      "chargebackRate": "Chargeback Rate",
+      "refundRate": "Refund Rate",
+      "projectionMonths": "Projection Period"
+    },
+    "roi": {
+      "title": "ROI Projection",
+      "totalCost": "Total Cost",
+      "monthlyCost": "Monthly Cost",
+      "savings": "Savings",
+      "paybackPeriod": "Payback Period"
+    },
+    "features": {
+      "title": "Feature Matrix",
+      "security": "Security",
+      "technical": "Technical",
+      "paymentMethods": "Payment Methods",
+      "business": "Business",
+      "innovation": "Innovation"
+    },
+    "integration": {
+      "title": "Integration Analysis",
+      "complexity": "Complexity",
+      "timeToLive": "Integration Time",
+      "documentation": "Documentation",
+      "support": "Support"
+    },
+    "performance": {
+      "title": "Performance Metrics",
+      "uptime": "Uptime",
+      "responseTime": "Response Time",
+      "throughput": "Throughput",
+      "globalCoverage": "Global Coverage"
+    }
+  },
+  "chat": {
+    "title": "AI Finance Expert",
+    "subtitle": "Your expert AI consultant on POS systems, blockchain, DeFi and fintech topics",
+    "status": {
+      "online": "Online",
+      "active": "Active"
+    },
+    "quickSearch": {
+      "title": "Quick Search",
+      "placeholder": "Search for POS, blockchain or fintech topics...",
+      "resultsFound": "results found"
+    },
+    "marketData": {
+      "title": "Market Data",
+      "avgCommission": "Average Commission",
+      "dailyVolume": "Daily Transaction Volume",
+      "activePOS": "Active POS Count",
+      "blockchainSupport": "Blockchain Support"
+    },
+    "expertise": {
+      "title": "Areas of Expertise",
+      "virtualPOS": "Virtual POS Systems",
+      "blockchain": "Blockchain Technologies",
+      "defi": "DeFi Protocols",
+      "crypto": "Crypto Payments",
+      "fintech": "Fintech Solutions",
+      "api": "API Integrations",
+      "security": "Security Standards",
+      "costAnalysis": "Cost Analysis"
+    },
+    "latestNews": {
+      "title": "Latest News"
+    },
+    "quickQuestions": {
+      "title": "Frequently Asked Questions",
+      "subtitle": "Most curious questions about fintech, blockchain and POS topics",
+      "tabs": {
+        "all": "All",
+        "pos": "POS",
+        "blockchain": "Blockchain",
+        "fintech": "Fintech",
+        "technical": "Technical"
+      },
+      "categories": {
+        "cost": "Cost",
+        "security": "Security",
+        "blockchain": "Blockchain",
+        "innovation": "Innovation",
+        "trend": "Trend",
+        "api": "API",
+        "integration": "Integration",
+        "mobile": "Mobile",
+        "corporate": "Corporate",
+        "developer": "Developer",
+        "crypto": "Crypto",
+        "compliance": "Compliance"
+      }
+    },
+    "input": {
+      "placeholder": "Ask questions about fintech, blockchain or POS...",
+      "send": "Send",
+      "sending": "Sending..."
+    },
+    "welcomeMessage": "Hello! I'm PAYREAM's AI finance expert. I can help you with POS systems, blockchain technologies, DeFi protocols and fintech solutions. What topic would you like information about?",
+    "errors": {
+      "sendFailed": "Message could not be sent. Please try again."
+    }
+  },
+  "assistant": {
+    "title": "PAYREAM Assistant",
+    "messages": [
+      "Hello! I'm your PAYREAM assistant 🤖",
+      "I can help you with POS systems",
+      "I'm here for blockchain and finance news",
+      "You can find the most up-to-date POS data in Turkey",
+      "You can talk to our AI expert for your questions"
+    ],
+    "chatButton": "Chat",
+    "searchButton": "Search POS",
+    "toggleAssistant": "Toggle assistant robot"
+  },
+  "footer": {
+    "company": {
+      "description": "Turkey's most comprehensive fintech platform. Your trusted guide for POS systems, blockchain technologies and financial solutions."
+    },
+    "services": {
+      "title": "Our Services",
+      "posComparison": "POS Systems Comparison",
+      "aiConsulting": "AI Finance Consulting",
+      "blockchainAnalysis": "Blockchain Analysis",
+      "defiReview": "DeFi Protocol Review",
+      "fintechNews": "Fintech News",
+      "apiGuide": "API Integration Guide"
+    },
+    "resources": {
+      "title": "Resources",
+      "fintechGuide": "Fintech Guide",
+      "blockchainEducation": "Blockchain Education",
+      "posSetupGuide": "POS Setup Guide",
+      "defiGuide": "DeFi Beginner's Guide",
+      "securityBestPractices": "Security Best Practices",
+      "faq": "Frequently Asked Questions"
+    },
+    "contact": {
+      "title": "Contact",
+      "email": "Email",
+      "phone": "Phone",
+      "address": "Address",
+      "website": "Website"
+    },
+    "stats": {
+      "title": "Platform Statistics",
+      "users": "Users",
+      "solutions": "Solutions",
+      "support": "Support",
+      "volume": "Volume"
+    },
+    "legal": {
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "cookies": "Cookie Policy",
+      "kvkk": "GDPR",
+      "legal": "Legal Notices"
+    },
+    "status": {
+      "systemActive": "System Active",
+      "lastUpdate": "Last Update"
+    },
+    "copyright": "All rights reserved.",
+    "developer": "Developer",
+    "mission": "This platform was developed to support Turkey's fintech ecosystem."
+  },
+  "accessibility": {
+    "skipToContent": "Skip to main content",
+    "skipToNavigation": "Skip to navigation",
+    "openInNewTab": "Open in new tab",
+    "externalLink": "External link",
+    "loading": "Content loading",
+    "searchResults": "Search results",
+    "chatMessages": "Chat messages",
+    "userMessage": "User message",
+    "aiMessage": "AI message",
+    "providerCard": "Provider card",
+    "newsCard": "News card",
+    "filterControls": "Filter controls",
+    "sortingControls": "Sorting controls",
+    "ratingStars": "Rating stars",
+    "languageSelector": "Language selector",
+    "themeToggle": "Theme toggle"
+  }
+}

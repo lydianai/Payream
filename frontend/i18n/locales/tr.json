@@ -1,0 +1,354 @@
+{
+  "common": {
+    "search": "Ara",
+    "loading": "Yükleniyor...",
+    "error": "Hata",
+    "close": "Kapat",
+    "open": "Aç",
+    "menu": "Menü",
+    "home": "Ana Sayfa",
+    "back": "Geri",
+    "next": "İleri",
+    "previous": "Önceki",
+    "submit": "Gönder",
+    "cancel": "İptal",
+    "save": "Kaydet",
+    "delete": "Sil",
+    "edit": "Düzenle",
+    "view": "Görüntüle",
+    "details": "Detaylar",
+    "more": "Daha fazla",
+    "less": "Daha az",
+    "all": "Tümü",
+    "none": "Hiçbiri",
+    "yes": "Evet",
+    "no": "Hayır",
+    "ok": "Tamam"
+  },
+  "navigation": {
+    "home": "Ana Sayfa",
+    "search": "POS Ara",
+    "chat": "AI Finans Uzmanı",
+    "comparison": "Karşılaştırma",
+    "news": "Haberler",
+    "about": "Hakkımızda",
+    "contact": "İletişim",
+    "skipToContent": "İçeriğe geç",
+    "mainNavigation": "Ana navigasyon",
+    "breadcrumb": "Sayfa konumu"
+  },
+  "header": {
+    "logo": "PAYREAM ana sayfasına git",
+    "searchButton": "Arama sayfasına git",
+    "chatButton": "AI finans uzmanı ile konuş",
+    "toggleMobileMenu": "Mobil menüyü aç/kapat"
+  },
+  "home": {
+    "title": "Türkiye'nin En Kapsamlı Fintech Platformu",
+    "subtitle": "POS sistemleri, blockchain teknolojileri ve fintech çözümlerini karşılaştırın. AI destekli uzmanımızla en uygun finansal teknoloji çözümünü bulun.",
+    "searchPlaceholder": "POS, blockchain, fintech çözümü ara...",
+    "exploreButton": "Fintech Çözümlerini Keşfet",
+    "chatButton": "AI Finans Uzmanı",
+    "stats": {
+      "solutions": "Fintech Çözümü",
+      "users": "Aktif Kullanıcı",
+      "volume": "Günlük İşlem Hacmi",
+      "support": "AI Destek"
+    },
+    "features": {
+      "title": "Neden PAYREAM?",
+      "subtitle": "Fintech dünyasında doğru kararı vermeniz için ihtiyacınız olan tüm bilgiler burada",
+      "advancedSearch": {
+        "title": "Gelişmiş Arama",
+        "description": "POS, blockchain ve fintech çözümlerini detaylı filtrelerle karşılaştırın"
+      },
+      "realTimeData": {
+        "title": "Gerçek Zamanlı Veriler",
+        "description": "Komisyon oranları, blockchain verileri ve piyasa analizleri"
+      },
+      "aiExpert": {
+        "title": "AI Finans Uzmanı",
+        "description": "Blockchain, DeFi ve fintech konularında 7/24 AI danışmanlığı"
+      }
+    },
+    "benefits": {
+      "title": "Modern Fintech Çözümlerinin Avantajları",
+      "subtitle": "Geleceğin finansal teknolojileri ile işinizi büyütün",
+      "blockchainSecurity": {
+        "title": "Blockchain Güvenliği",
+        "description": "Merkezi olmayan güvenlik protokolleri ile maksimum koruma"
+      },
+      "instantTransactions": {
+        "title": "Anında İşlemler",
+        "description": "DeFi protokolleri ile 7/24 anında para transferi"
+      },
+      "multiPayment": {
+        "title": "Çoklu Ödeme Desteği",
+        "description": "Fiat, kripto, NFT ve stablecoin ödemeleri"
+      },
+      "lowCosts": {
+        "title": "Düşük Maliyetler",
+        "description": "Geleneksel bankacılığa göre %70 daha düşük işlem ücreti"
+      },
+      "apiFirst": {
+        "title": "API-First Yaklaşım",
+        "description": "RESTful API ve Web3 entegrasyonu ile kolay kurulum"
+      },
+      "latestNews": {
+        "title": "Güncel Haberler",
+        "description": "Fintech ve blockchain dünyasından son gelişmeler"
+      }
+    },
+    "news": {
+      "title": "Fintech ve Blockchain Haberleri",
+      "subtitle": "Türkiye'deki finansal teknoloji dünyasından son gelişmeler",
+      "readMore": "Devamını Oku",
+      "viewAll": "Tüm Haberleri Görüntüle",
+      "readTime": "dk okuma"
+    },
+    "providers": {
+      "title": "Öne Çıkan Fintech Çözümleri",
+      "subtitle": "En yenilikçi ve güvenilir finansal teknoloji sağlayıcıları",
+      "viewDetails": "Detayları Gör",
+      "rating": "Puan",
+      "features": "Özellikler",
+      "pricing": "Fiyat"
+    },
+    "cta": {
+      "title": "Fintech Yolculuğunuza Başlayın",
+      "subtitle": "İşiniz için en uygun finansal teknoloji çözümünü bulmak sadece birkaç tık uzağınızda",
+      "exploreButton": "Çözümleri Keşfet",
+      "chatButton": "AI Uzmanla Konuş"
+    }
+  },
+  "search": {
+    "title": "Fintech Çözümleri Ara",
+    "searchPlaceholder": "POS, blockchain, fintech çözümü ara...",
+    "searchButton": "Ara",
+    "filters": {
+      "category": "Kategori",
+      "categoryPlaceholder": "Kategori seçin",
+      "allCategories": "Tüm Kategoriler",
+      "sorting": "Sıralama",
+      "sortByRating": "Puana Göre",
+      "sortByCommission": "Komisyona Göre",
+      "sortByName": "İsme Göre",
+      "sortByEstablished": "Kuruluş Yılına Göre",
+      "advancedFilters": "Gelişmiş Filtreler",
+      "minRating": "Minimum Puan",
+      "maxCommission": "Maksimum Komisyon"
+    },
+    "results": {
+      "found": "sonuç bulundu",
+      "noResults": "Arama kriterlerinize uygun sonuç bulunamadı.",
+      "searching": "Aranıyor...",
+      "avgRating": "Ortalama puan",
+      "commissionRange": "Komisyon aralığı"
+    },
+    "provider": {
+      "features": "Özellikler",
+      "pricing": "Fiyatlandırma",
+      "technicalInfo": "Teknik Bilgiler",
+      "supportedCards": "Desteklenen Kartlar",
+      "securityFeatures": "Güvenlik Özellikleri",
+      "integration": "Entegrasyon",
+      "support": "Destek",
+      "company": "Şirket",
+      "setup": "Kurulum",
+      "monthly": "Aylık",
+      "viewDetails": "Detayları Görüntüle"
+    }
+  },
+  "comparison": {
+    "title": "POS Karşılaştırması",
+    "subtitle": "Seçilen sağlayıcıların detaylı karşılaştırması",
+    "calculator": {
+      "title": "Maliyet Hesaplayıcı",
+      "businessSize": "İşletme Büyüklüğü",
+      "monthlyVolume": "Aylık İşlem Hacmi",
+      "averageTransaction": "Ortalama İşlem Tutarı",
+      "chargebackRate": "Chargeback Oranı",
+      "refundRate": "İade Oranı",
+      "projectionMonths": "Projeksiyon Süresi"
+    },
+    "roi": {
+      "title": "ROI Projeksiyonu",
+      "totalCost": "Toplam Maliyet",
+      "monthlyCost": "Aylık Maliyet",
+      "savings": "Tasarruf",
+      "paybackPeriod": "Geri Ödeme Süresi"
+    },
+    "features": {
+      "title": "Özellik Matrisi",
+      "security": "Güvenlik",
+      "technical": "Teknik",
+      "paymentMethods": "Ödeme Yöntemleri",
+      "business": "İş",
+      "innovation": "Yenilik"
+    },
+    "integration": {
+      "title": "Entegrasyon Analizi",
+      "complexity": "Karmaşıklık",
+      "timeToLive": "Entegrasyon Süresi",
+      "documentation": "Dokümantasyon",
+      "support": "Destek"
+    },
+    "performance": {
+      "title": "Performans Metrikleri",
+      "uptime": "Çalışma Süresi",
+      "responseTime": "Yanıt Süresi",
+      "throughput": "İşlem Kapasitesi",
+      "globalCoverage": "Küresel Kapsam"
+    }
+  },
+  "chat": {
+    "title": "AI Finans Uzmanı",
+    "subtitle": "POS sistemleri, blockchain, DeFi ve fintech konularında uzman AI danışmanınız",
+    "status": {
+      "online": "Çevrimiçi",
+      "active": "Aktif"
+    },
+    "quickSearch": {
+      "title": "Hızlı Arama",
+      "placeholder": "POS, blockchain veya fintech konularında ara...",
+      "resultsFound": "sonuç bulundu"
+    },
+    "marketData": {
+      "title": "Piyasa Verileri",
+      "avgCommission": "Ortalama Komisyon",
+      "dailyVolume": "Günlük İşlem Hacmi",
+      "activePOS": "Aktif POS Sayısı",
+      "blockchainSupport": "Blockchain Desteği"
+    },
+    "expertise": {
+      "title": "Uzmanlık Alanları",
+      "virtualPOS": "Sanal POS Sistemleri",
+      "blockchain": "Blockchain Teknolojileri",
+      "defi": "DeFi Protokolleri",
+      "crypto": "Kripto Para Ödemeleri",
+      "fintech": "Fintech Çözümleri",
+      "api": "API Entegrasyonları",
+      "security": "Güvenlik Standartları",
+      "costAnalysis": "Maliyet Analizleri"
+    },
+    "latestNews": {
+      "title": "Son Haberler"
+    },
+    "quickQuestions": {
+      "title": "Sık Sorulan Sorular",
+      "subtitle": "Fintech, blockchain ve POS konularında en çok merak edilen sorular",
+      "tabs": {
+        "all": "Tümü",
+        "pos": "POS",
+        "blockchain": "Blockchain",
+        "fintech": "Fintech",
+        "technical": "Teknik"
+      },
+      "categories": {
+        "cost": "Maliyet",
+        "security": "Güvenlik",
+        "blockchain": "Blockchain",
+        "innovation": "Yenilik",
+        "trend": "Trend",
+        "api": "API",
+        "integration": "Entegrasyon",
+        "mobile": "Mobil",
+        "corporate": "Kurumsal",
+        "developer": "Geliştirici",
+        "crypto": "Kripto",
+        "compliance": "Uyumluluk"
+      }
+    },
+    "input": {
+      "placeholder": "Fintech, blockchain veya POS hakkında soru sorun...",
+      "send": "Gönder",
+      "sending": "Gönderiliyor..."
+    },
+    "welcomeMessage": "Merhaba! Ben PAYREAM'in AI finans uzmanınızım. POS sistemleri, blockchain teknolojileri, DeFi protokolleri ve fintech çözümleri hakkında size yardımcı olabilirim. Hangi konuda bilgi almak istiyorsunuz?",
+    "errors": {
+      "sendFailed": "Mesaj gönderilemedi. Lütfen tekrar deneyin."
+    }
+  },
+  "assistant": {
+    "title": "PAYREAM Asistanı",
+    "messages": [
+      "Merhaba! Ben PAYREAM asistanınızım 🤖",
+      "Size POS sistemleri konusunda yardımcı olabilirim",
+      "Blockchain ve finans haberleri için buradayım",
+      "Türkiye'deki en güncel POS verilerini bulabilirsiniz",
+      "Sorularınız için AI uzmanımla konuşabilirsiniz"
+    ],
+    "chatButton": "Sohbet Et",
+    "searchButton": "POS Ara",
+    "toggleAssistant": "Asistan robotunu aç/kapat"
+  },
+  "footer": {
+    "company": {
+      "description": "Türkiye'nin en kapsamlı fintech platformu. POS sistemleri, blockchain teknolojileri ve finansal çözümler için güvenilir rehberiniz."
+    },
+    "services": {
+      "title": "Hizmetlerimiz",
+      "posComparison": "POS Sistemleri Karşılaştırması",
+      "aiConsulting": "AI Finans Danışmanlığı",
+      "blockchainAnalysis": "Blockchain Analizi",
+      "defiReview": "DeFi Protokol İncelemesi",
+      "fintechNews": "Fintech Haberleri",
+      "apiGuide": "API Entegrasyon Rehberi"
+    },
+    "resources": {
+      "title": "Kaynaklar",
+      "fintechGuide": "Fintech Rehberi",
+      "blockchainEducation": "Blockchain Eğitimleri",
+      "posSetupGuide": "POS Kurulum Kılavuzu",
+      "defiGuide": "DeFi Başlangıç Rehberi",
+      "securityBestPractices": "Güvenlik En İyi Uygulamaları",
+      "faq": "Sık Sorulan Sorular"
+    },
+    "contact": {
+      "title": "İletişim",
+      "email": "E-posta",
+      "phone": "Telefon",
+      "address": "Adres",
+      "website": "Web sitesi"
+    },
+    "stats": {
+      "title": "Platform İstatistikleri",
+      "users": "Kullanıcı",
+      "solutions": "Çözüm",
+      "support": "Destek",
+      "volume": "Hacim"
+    },
+    "legal": {
+      "privacy": "Gizlilik Politikası",
+      "terms": "Kullanım Şartları",
+      "cookies": "Çerez Politikası",
+      "kvkk": "KVKK",
+      "legal": "Yasal Uyarılar"
+    },
+    "status": {
+      "systemActive": "Sistem Aktif",
+      "lastUpdate": "Son Güncelleme"
+    },
+    "copyright": "Tüm hakları saklıdır.",
+    "developer": "Geliştirici",
+    "mission": "Bu platform, Türkiye'deki fintech ekosistemini desteklemek amacıyla geliştirilmiştir."
+  },
+  "accessibility": {
+    "skipToContent": "Ana içeriğe geç",
+    "skipToNavigation": "Navigasyona geç",
+    "openInNewTab": "Yeni sekmede aç",
+    "externalLink": "Harici bağlantı",
+    "loading": "İçerik yükleniyor",
+    "searchResults": "Arama sonuçları",
+    "chatMessages": "Sohbet mesajları",
+    "userMessage": "Kullanıcı mesajı",
+    "aiMessage": "AI mesajı",
+    "providerCard": "Sağlayıcı kartı",
+    "newsCard": "Haber kartı",
+    "filterControls": "Filtre kontrolleri",
+    "sortingControls": "Sıralama kontrolleri",
+    "ratingStars": "Puan yıldızları",
+    "languageSelector": "Dil seçici",
+    "themeToggle": "Tema değiştirici"
+  }
+}

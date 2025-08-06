@@ -1,0 +1,1 @@
+{"id": "virtual-pos-website-xewi", "lang": "typescript"}
