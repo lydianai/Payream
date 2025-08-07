@@ -1,6 +1,10 @@
 import { authHandler } from "encore.dev/auth";
 import { Header, Cookie, APIError } from "encore.dev/api";
 import { userDB } from "../user/db";
+import { secret } from "encore.dev/config";
+
+// TODO: Set this secret in the Encore Cloud dashboard.
+const jwtSecret = secret("JWTSecretKey");
 
 interface AuthParams {
   authorization?: Header<"Authorization">;
@@ -15,7 +19,12 @@ export interface AuthData {
   provider: string;
 }
 
-const auth = authHandler<AuthParams, AuthData>(
+// Configure the authorized parties.
+const AUTHORIZED_PARTIES = [
+  "https://www.payream.xyz",
+];
+
+export const auth = authHandler<AuthParams, AuthData>(
   async (data) => {
     // Resolve the authenticated user from the authorization header or session cookie
     const token = data.authorization?.replace("Bearer ", "") ?? data.session?.value;
@@ -58,8 +67,18 @@ async function verifyJWT(token: string): Promise<{ sub: string; email: string; e
     if (parts.length !== 3) {
       throw new Error("Invalid token format");
     }
+    
+    const [encodedHeader, encodedPayload, signature] = parts;
 
-    const payload = JSON.parse(atob(parts[1]));
+    // In production, implement proper HMAC-SHA256 verification
+    // This is a simplified example and not secure for production.
+    // A real implementation should use a library like 'jsonwebtoken' and crypto for signing.
+    const expectedSignature = btoa(`${encodedHeader}.${encodedPayload}.${jwtSecret()}`);
+    if (signature !== expectedSignature) {
+      throw new Error("Invalid signature");
+    }
+
+    const payload = JSON.parse(atob(encodedPayload));
     
     // Check expiration
     if (payload.exp && payload.exp < Date.now() / 1000) {
@@ -71,5 +90,3 @@ async function verifyJWT(token: string): Promise<{ sub: string; email: string; e
     throw new Error("Invalid token");
   }
 }
-
-export { auth };

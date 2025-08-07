@@ -57,11 +57,11 @@ describe("App Component", () => {
     expect(screen.getByRole("button")).toBeInTheDocument();
   });
 
-  it("has correct routing structure", () => {
+  it("has correct routing structure", async () => {
     render(<App />);
     
     // Should be on home page by default
-    expect(screen.getByText(/Türkiye'nin En Kapsamlı/)).toBeInTheDocument();
+    expect(await screen.findByText(/Türkiye'nin En Kapsamlı/)).toBeInTheDocument();
   });
 
   it("provides query client to children", () => {
@@ -71,9 +71,9 @@ describe("App Component", () => {
     expect(screen.getByText("PAYREAM")).toBeInTheDocument();
   });
 
-  it("renders with dark theme", () => {
+  it("renders with white theme", () => {
     const { container } = render(<App />);
     
-    expect(container.firstChild).toHaveClass("bg-gray-900");
+    expect(container.querySelector('.min-h-screen')).toHaveClass("bg-white");
   });
 });

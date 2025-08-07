@@ -1,14 +1,13 @@
 import { api, APIError } from "encore.dev/api";
 import { userDB } from "./db";
 import { generateJWT } from "./jwt";
+import { secret } from "encore.dev/config";
 
-// TODO: Replace with your actual OAuth credentials from Google Cloud Console.
-const googleClientId = "your-google-client-id";
-const googleClientSecret = "your-google-client-secret";
-
-// TODO: Replace with your actual OAuth credentials from LinkedIn Developer Portal.
-const linkedinClientId = "your-linkedin-client-id";
-const linkedinClientSecret = "your-linkedin-client-secret";
+// TODO: Set these secrets in the Encore Cloud dashboard.
+const googleClientId = secret("GoogleClientID");
+const googleClientSecret = secret("GoogleClientSecret");
+const linkedinClientId = secret("LinkedInClientID");
+const linkedinClientSecret = secret("LinkedInClientSecret");
 
 export interface OAuthCallbackRequest {
   code: string;
@@ -100,8 +99,8 @@ async function handleGoogleOAuth(code: string, redirectUri: string) {
       "Content-Type": "application/x-www-form-urlencoded",
     },
     body: new URLSearchParams({
-      client_id: googleClientId,
-      client_secret: googleClientSecret,
+      client_id: googleClientId(),
+      client_secret: googleClientSecret(),
       code,
       grant_type: "authorization_code",
       redirect_uri: redirectUri,
@@ -139,8 +138,8 @@ async function handleLinkedInOAuth(code: string, redirectUri: string) {
       grant_type: "authorization_code",
       code,
       redirect_uri: redirectUri,
-      client_id: linkedinClientId,
-      client_secret: linkedinClientSecret,
+      client_id: linkedinClientId(),
+      client_secret: linkedinClientSecret(),
     }),
   });
 

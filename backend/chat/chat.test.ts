@@ -1,8 +1,14 @@
 import { describe, it, expect, beforeEach, vi } from "vitest";
 import { chat } from "./chat";
+import { secret } from "encore.dev/config";
 
 // Mock fetch globally
 global.fetch = vi.fn();
+
+// Mock Encore secrets
+vi.mock("encore.dev/config", () => ({
+  secret: vi.fn((name: string) => () => `mock-secret-${name}`),
+}));
 
 describe("Chat API", () => {
   beforeEach(() => {
@@ -36,7 +42,7 @@ describe("Chat API", () => {
       expect.objectContaining({
         method: "POST",
         headers: {
-          "Authorization": "Bearer your-openai-api-key-here",
+          "Authorization": "Bearer mock-secret-OpenAIKey",
           "Content-Type": "application/json"
         }
       })

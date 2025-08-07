@@ -1,7 +1,8 @@
 import { api } from "encore.dev/api";
+import { secret } from "encore.dev/config";
 
-// TODO: Replace with your actual OpenAI API key.
-const openAIKey = "your-openai-api-key-here";
+// TODO: Set this secret in the Encore Cloud dashboard.
+const openAIKey = secret("OpenAIKey");
 
 export interface ChatRequest {
   message: string;
@@ -20,7 +21,7 @@ export const chat = api<ChatRequest, ChatResponse>(
       const response = await fetch("https://api.openai.com/v1/chat/completions", {
         method: "POST",
         headers: {
-          "Authorization": `Bearer ${openAIKey}`,
+          "Authorization": `Bearer ${openAIKey()}`,
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
