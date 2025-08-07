@@ -154,11 +154,14 @@ export default function ReviewForm({
           {/* Rating */}
           <div>
             <Label className="text-gray-900 mb-2 block">Puan *</Label>
-            <div className="flex items-center space-x-1">
+            <div className="flex items-center space-x-1" role="radiogroup" aria-label="Puan">
               {[1, 2, 3, 4, 5].map((star) => (
                 <button
                   key={star}
                   type="button"
+                  role="radio"
+                  aria-checked={star === rating}
+                  aria-label={`${star} yıldız`}
                   onClick={() => setRating(star)}
                   className="focus:outline-none"
                 >
@@ -226,6 +229,7 @@ export default function ReviewForm({
                   disabled={!newPro.trim() || pros.length >= 5}
                   size="sm"
                   className="bg-green-600 hover:bg-green-700"
+                  aria-label="Artı ekle"
                 >
                   <Plus className="h-4 w-4" />
                 </Button>
@@ -238,6 +242,7 @@ export default function ReviewForm({
                       type="button"
                       onClick={() => removePro(index)}
                       className="ml-1 hover:text-green-900"
+                      aria-label={`Artıyı kaldır: ${pro}`}
                     >
                       <X className="h-3 w-3" />
                     </button>
@@ -266,6 +271,7 @@ export default function ReviewForm({
                   disabled={!newCon.trim() || cons.length >= 5}
                   size="sm"
                   className="bg-red-600 hover:bg-red-700"
+                  aria-label="Eksi ekle"
                 >
                   <Plus className="h-4 w-4" />
                 </Button>
@@ -278,6 +284,7 @@ export default function ReviewForm({
                       type="button"
                       onClick={() => removeCon(index)}
                       className="ml-1 hover:text-red-900"
+                      aria-label={`Eksiyi kaldır: ${con}`}
                     >
                       <X className="h-3 w-3" />
                     </button>
@@ -293,7 +300,7 @@ export default function ReviewForm({
             <div>
               <Label htmlFor="usageDuration" className="text-gray-900">Kullanım Süresi</Label>
               <Select value={usageDuration} onValueChange={setUsageDuration}>
-                <SelectTrigger className="bg-white border-gray-300 text-gray-900">
+                <SelectTrigger id="usageDuration" aria-label="Kullanım Süresi" className="bg-white border-gray-300 text-gray-900">
                   <SelectValue placeholder="Seçin" />
                 </SelectTrigger>
                 <SelectContent className="bg-white border-gray-200">
@@ -309,15 +316,15 @@ export default function ReviewForm({
             <div>
               <Label htmlFor="businessSize" className="text-gray-900">İşletme Büyüklüğü</Label>
               <Select value={businessSize} onValueChange={setBusinessSize}>
-                <SelectTrigger className="bg-white border-gray-300 text-gray-900">
+                <SelectTrigger id="businessSize" aria-label="İşletme Büyüklüğü" className="bg-white border-gray-300 text-gray-900">
                   <SelectValue placeholder="Seçin" />
                 </SelectTrigger>
                 <SelectContent className="bg-white border-gray-200">
                   <SelectItem value="Bireysel">Bireysel</SelectItem>
-                  <SelectItem value="Küçük İşletme">Küçük İşletme (1-10 kişi)</SelectItem>
-                  <SelectItem value="Orta İşletme">Orta İşletme (11-50 kişi)</SelectItem>
-                  <SelectItem value="Büyük İşletme">Büyük İşletme (51-200 kişi)</SelectItem>
-                  <SelectItem value="Kurumsal">Kurumsal (200+ kişi)</SelectItem>
+                  <SelectItem value="Küçük İşletme (1-10 kişi)">Küçük İşletme (1-10 kişi)</SelectItem>
+                  <SelectItem value="Orta İşletme (11-50 kişi)">Orta İşletme (11-50 kişi)</SelectItem>
+                  <SelectItem value="Büyük İşletme (51-200 kişi)">Büyük İşletme (51-200 kişi)</SelectItem>
+                  <SelectItem value="Kurumsal (200+ kişi)">Kurumsal (200+ kişi)</SelectItem>
                 </SelectContent>
               </Select>
             </div>
@@ -325,7 +332,7 @@ export default function ReviewForm({
             <div>
               <Label htmlFor="useCase" className="text-gray-900">Kullanım Alanı</Label>
               <Select value={useCase} onValueChange={setUseCase}>
-                <SelectTrigger className="bg-white border-gray-300 text-gray-900">
+                <SelectTrigger id="useCase" aria-label="Kullanım Alanı" className="bg-white border-gray-300 text-gray-900">
                   <SelectValue placeholder="Seçin" />
                 </SelectTrigger>
                 <SelectContent className="bg-white border-gray-200">

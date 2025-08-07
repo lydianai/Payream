@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 import { Search, Filter, SlidersHorizontal, Star, TrendingUp, GitCompare, Heart, Plus, MessageSquare } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -136,7 +137,7 @@ export default function SearchPage() {
                   {t('search.filters.allCategories')}
                 </SelectItem>
                 {categories?.categories.map((cat) => (
-                  <SelectItem key={cat.id} value={cat.id} className="text-gray-900 hover:bg-gray-50">
+                  <SelectItem key={cat.id} value={cat.name} className="text-gray-900 hover:bg-gray-50">
                     {cat.name} ({cat.count})
                   </SelectItem>
                 ))}
@@ -537,9 +538,12 @@ function ProviderCard({ provider, isSelected, onToggleSelection }: ProviderCardP
               variant="outline"
               size="sm"
               className="border-gray-300 text-gray-700 hover:bg-gray-50"
+              asChild
             >
-              <MessageSquare className="h-4 w-4 mr-1" />
-              Değerlendirmeleri Gör
+              <Link to={`/provider/${provider.id}`}>
+                <MessageSquare className="h-4 w-4 mr-1" />
+                Değerlendirmeleri Gör
+              </Link>
             </Button>
           </div>
         </div>

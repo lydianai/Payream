@@ -15,6 +15,7 @@ const SearchPage = lazy(() => import("./pages/SearchPage"));
 const ComparisonPage = lazy(() => import("./pages/ComparisonPage"));
 const ChatPage = lazy(() => import("./pages/ChatPage"));
 const BanksPage = lazy(() => import("./pages/BanksPage"));
+const ProviderDetailPage = lazy(() => import("./pages/ProviderDetailPage"));
 
 // Create query client with optimized caching strategies
 const queryClient = new QueryClient({
@@ -55,6 +56,7 @@ export default function App() {
                 <Route path="/comparison" element={<ComparisonPage />} />
                 <Route path="/chat" element={<ChatPage />} />
                 <Route path="/banks" element={<BanksPage />} />
+                <Route path="/provider/:id" element={<ProviderDetailPage />} />
               </Routes>
             </Suspense>
           </main>

@@ -79,12 +79,12 @@ export const createReview = api<CreateReviewRequest, { id: string }>(
     const review = await reviewDB.queryRow`
       INSERT INTO reviews (
         provider_id, provider_name, user_id, rating, title, content, 
-        pros, cons, usage_duration, business_size, use_case, would_recommend
+        pros, cons, usage_duration, business_size, use_case, would_recommend, status
       )
       VALUES (
         ${req.providerId}, ${req.providerName}, ${auth.userID}, ${req.rating}, 
         ${req.title}, ${req.content}, ${req.pros}, ${req.cons}, 
-        ${req.usageDuration}, ${req.businessSize}, ${req.useCase}, ${req.wouldRecommend}
+        ${req.usageDuration}, ${req.businessSize}, ${req.useCase}, ${req.wouldRecommend}, 'approved'
       )
       RETURNING id
     `;
