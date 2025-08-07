@@ -29,6 +29,7 @@
     "home": "Ana Sayfa",
     "search": "POS Ara",
     "chat": "AI Finans Uzmanı",
+    "analytics": "Analiz",
     "comparison": "Karşılaştırma",
     "news": "Haberler",
     "about": "Hakkımızda",
@@ -98,13 +99,6 @@
         "title": "Güncel Haberler",
         "description": "Fintech ve blockchain dünyasından son gelişmeler"
       }
-    },
-    "news": {
-      "title": "Fintech ve Blockchain Haberleri",
-      "subtitle": "Türkiye'deki finansal teknoloji dünyasından son gelişmeler",
-      "readMore": "Devamını Oku",
-      "viewAll": "Tüm Haberleri Görüntüle",
-      "readTime": "dk okuma"
     },
     "providers": {
       "title": "Öne Çıkan Fintech Çözümleri",
@@ -350,5 +344,33 @@
     "ratingStars": "Puan yıldızları",
     "languageSelector": "Dil seçici",
     "themeToggle": "Tema değiştirici"
+  },
+  "analytics": {
+    "title": "Fintech Pazar Analizi",
+    "subtitle": "Piyasa trendleri, sağlayıcı popülerliği ve sektör içgörüleri.",
+    "kpis": {
+      "totalProviders": "Toplam Sağlayıcı",
+      "avgCommission": "Ort. Komisyon",
+      "avgRating": "Ort. Puan",
+      "newsCount": "Haber (Son 30g)"
+    },
+    "commissionTrends": {
+      "title": "Komisyon Oranı Trendleri (Son 12 Ay)",
+      "description": "Önde gelen sağlayıcıların komisyon oranlarındaki değişim."
+    },
+    "providerPopularity": {
+      "title": "Sağlayıcı Popülerliği (Değerlendirme Sayısına Göre)",
+      "description": "En çok değerlendirme alan ilk 10 sağlayıcı.",
+      "yAxisLabel": "Değerlendirme Sayısı"
+    },
+    "categoryDistribution": {
+      "title": "Kategori Dağılımı"
+    },
+    "featureAdoption": {
+      "title": "Popüler Özellikler"
+    },
+    "industryInsights": {
+      "title": "Sektör İçgörüleri"
+    }
   }
 }

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { User, Settings, Heart, History, LogOut, TrendingUp } from "lucide-react";
+import { User, Settings, Heart, History, LogOut, TrendingUp, BarChart3 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -64,12 +64,11 @@ export default function UserMenu() {
       <Button
         variant="outline"
         className="border-gray-300 text-gray-700 hover:bg-gray-50 focus:ring-2 focus:ring-green-500 focus:ring-offset-2 focus:ring-offset-white"
-        aria-label="Giriş Yap"
-        // For now, we don't have a login page, so this button does nothing.
-        // In a real app, it would navigate to /login.
+        onClick={() => navigate('/login')}
+        aria-label="Giriş Yap / Kayıt Ol"
       >
         <User className="h-4 w-4 mr-2" aria-hidden="true" />
-        Giriş Yap
+        Giriş Yap / Kayıt Ol
       </Button>
     );
   }
@@ -97,6 +96,12 @@ export default function UserMenu() {
             <Link to="/profile" className="cursor-pointer">
               <User className="mr-2 h-4 w-4" />
               <span>Profil</span>
+            </Link>
+          </DropdownMenuItem>
+          <DropdownMenuItem asChild>
+            <Link to="/analytics" className="cursor-pointer">
+              <BarChart3 className="mr-2 h-4 w-4" />
+              <span>Analiz</span>
             </Link>
           </DropdownMenuItem>
           <DropdownMenuItem asChild>

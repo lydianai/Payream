@@ -29,6 +29,7 @@
     "home": "Home",
     "search": "Search POS",
     "chat": "AI Finance Expert",
+    "analytics": "Analytics",
     "comparison": "Comparison",
     "news": "News",
     "about": "About",
@@ -98,13 +99,6 @@
         "title": "Latest News",
         "description": "Latest developments from the fintech and blockchain world"
       }
-    },
-    "news": {
-      "title": "Fintech and Blockchain News",
-      "subtitle": "Latest developments from Turkey's financial technology world",
-      "readMore": "Read More",
-      "viewAll": "View All News",
-      "readTime": "min read"
     },
     "providers": {
       "title": "Featured Fintech Solutions",
@@ -350,5 +344,33 @@
     "ratingStars": "Rating stars",
     "languageSelector": "Language selector",
     "themeToggle": "Theme toggle"
+  },
+  "analytics": {
+    "title": "Fintech Market Analytics",
+    "subtitle": "Market trends, provider popularity, and industry insights.",
+    "kpis": {
+      "totalProviders": "Total Providers",
+      "avgCommission": "Avg. Commission",
+      "avgRating": "Avg. Rating",
+      "newsCount": "News (Last 30d)"
+    },
+    "commissionTrends": {
+      "title": "Commission Rate Trends (Last 12 Months)",
+      "description": "Changes in commission rates of leading providers."
+    },
+    "providerPopularity": {
+      "title": "Provider Popularity (by Review Count)",
+      "description": "Top 10 providers with the most reviews.",
+      "yAxisLabel": "Review Count"
+    },
+    "categoryDistribution": {
+      "title": "Category Distribution"
+    },
+    "featureAdoption": {
+      "title": "Popular Features"
+    },
+    "industryInsights": {
+      "title": "Industry Insights"
+    }
   }
 }
