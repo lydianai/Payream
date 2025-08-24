@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Heart } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { Building, Shield, Users, TrendingUp, Star, ExternalLink, Search, Filter, Calendar, MapPin, Phone, Mail, Globe, CreditCard, Zap, Lock, Database, Monitor, CheckCircle, Award, Clock } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -9,10 +10,10 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Progress } from "@/components/ui/progress";
 
-export default function BanksPage() {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [sortBy, setSortBy] = useState("customers");
+  const [favorites, setFavorites] = useState<string[]>([]);
   const { t } = useTranslation();
 
   const banks = [
@@ -547,7 +548,7 @@ export default function BanksPage() {
           <Card key={bank.id} className="bg-white border-gray-200 hover:shadow-lg transition-all duration-300 hover:scale-105">
             <CardHeader>
               <div className="flex items-center space-x-4">
-                <div className="w-16 h-16 bg-gray-100 rounded-lg flex items-center justify-center">
+                <div className="w-16 h-16 bg-gray-100 rounded-lg flex items-center justify-center relative">
                   <img 
                     src={bank.logo} 
                     alt={`${bank.name} logo`}
@@ -557,13 +558,27 @@ export default function BanksPage() {
                       target.style.display = 'none';
                       const parent = target.parentElement;
                       if (parent) {
-                        parent.innerHTML = `<span class="text-lg font-bold text-gray-600">${bank.name.charAt(0)}</span>`;
+                        parent.innerHTML = `<svg width='48' height='48' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'><rect width='48' height='48' rx='12' fill='#e5e7eb'/><text x='50%' y='55%' text-anchor='middle' fill='#6b7280' font-size='20' font-family='Arial' dy='.3em'>${bank.name.charAt(0)}</text></svg>`;
                       }
                     }}
                   />
+                  {favorites.includes(bank.id) && (
+                    <Heart className="absolute top-1 right-1 h-5 w-5 text-red-500" />
+                  )}
                 </div>
                 <div className="flex-1">
-                  <CardTitle className="text-lg text-gray-900">{bank.name}</CardTitle>
+                  <CardTitle className="text-lg text-gray-900 flex items-center">
+                    {bank.name}
+                    <Button
+                      size="icon"
+                      variant="ghost"
+                      className="ml-2"
+                      aria-label="Favorilere ekle/kaldır"
+                      onClick={() => setFavorites(favs => favs.includes(bank.id) ? favs.filter(id => id !== bank.id) : [...favs, bank.id])}
+                    >
+                      <Heart className={`h-5 w-5 ${favorites.includes(bank.id) ? 'text-red-500 fill-current' : 'text-gray-400'}`} />
+                    </Button>
+                  </CardTitle>
                   <CardDescription className="text-gray-600">{bank.description}</CardDescription>
                   <div className="flex items-center mt-2">
                     <div className="flex text-yellow-500">

@@ -267,6 +267,7 @@ export default function HomePage() {
                 <h4 className="text-lg font-semibold text-gray-900 mb-4 text-center">Güvenlik Altyapısı</h4>
                 <div className="grid md:grid-cols-4 gap-4 text-center">
                   <div className="p-3 bg-green-50 rounded-lg">
+                  import { Helmet } from "react-helmet";
                     <Shield className="h-6 w-6 text-green-600 mx-auto mb-2" />
                     <p className="text-sm font-medium text-gray-900">PCI DSS Level 1</p>
                     <p className="text-xs text-gray-600">En yüksek güvenlik standardı</p>
@@ -367,6 +368,37 @@ export default function HomePage() {
                   {t('home.features.aiExpert.description')}
                 </CardDescription>
               </CardHeader>
+                        <Helmet>
+                          <title>Payream - Sanal POS ve Finans Platformu</title>
+                          <meta name="description" content="Türkiye ve dünya genelinde sanal POS, finans, haber ve kullanıcı değerlendirmeleri platformu." />
+                          <meta name="keywords" content="sanal pos, finans, haber, kullanıcı değerlendirmeleri, Türkiye, global" />
+                          <link rel="canonical" href="https://payream.com/" />
+                          <meta property="og:title" content="Payream - Sanal POS ve Finans Platformu" />
+                          <meta property="og:description" content="Türkiye ve dünya genelinde sanal POS, finans, haber ve kullanıcı değerlendirmeleri platformu." />
+                          <meta property="og:type" content="website" />
+                          <meta property="og:url" content="https://payream.com/" />
+                          <meta property="og:image" content="https://payream.com/public/images/og-image.png" />
+                          <meta name="twitter:card" content="summary_large_image" />
+                          <meta name="twitter:title" content="Payream - Sanal POS ve Finans Platformu" />
+                          <meta name="twitter:description" content="Türkiye ve dünya genelinde sanal POS, finans, haber ve kullanıcı değerlendirmeleri platformu." />
+                          <meta name="twitter:image" content="https://payream.com/public/images/og-image.png" />
+                          <meta name="robots" content="index, follow" />
+                          <meta name="google-site-verification" content="GOOGLE_VERIFICATION_CODE" />
+                          <meta name="bingbot" content="index, follow" />
+                          <link rel="alternate" hreflang="tr" href="https://payream.com/" />
+                          <link rel="alternate" hreflang="en" href="https://payream.com/en" />
+                          <script type="application/ld+json">
+                            {`
+                              {
+                                "@context": "https://schema.org",
+                                "@type": "WebSite",
+                                "name": "Payream",
+                                "url": "https://payream.com/",
+                                "description": "Türkiye ve dünya genelinde sanal POS, finans, haber ve kullanıcı değerlendirmeleri platformu."
+                              }
+                            `}
+                          </script>
+                        </Helmet>
             </Card>
           </div>
         </div>

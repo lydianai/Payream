@@ -58,21 +58,25 @@ export interface DashboardData {
 export const getDashboardData = api<void, DashboardData>(
   { expose: true, method: "GET", path: "/analytics/dashboard" },
   async () => {
-    // Fetch data from other services
-    const [allProvidersResponse, categoriesResponse, newsResponse] = await Promise.all([
-      pos.search({ query: "", limit: 100 }),
-      pos.getCategories(),
-      news.getNews({ limit: 20 })
-    ]);
-
-    const allProviders = allProvidersResponse.providers;
-    const categories = categoriesResponse.categories;
+    // MOCK DATA
+    const allProviders = [
+      { name: "Ziraat Bankası", commission: 2.8, rating: 4.2, reviewCount: 120, category: "Kamu", features: ["Sanal POS", "3D Secure"] },
+      { name: "Garanti BBVA", commission: 2.9, rating: 4.5, reviewCount: 98, category: "Özel", features: ["Sanal POS", "API Entegrasyonu"] },
+      { name: "İş Bankası", commission: 3.0, rating: 4.3, reviewCount: 75, category: "Özel", features: ["Sanal POS", "Maximum Kart"] },
+    ];
+    const categories = [
+      { name: "Kamu", count: 1 },
+      { name: "Özel", count: 2 },
+    ];
+    const news = [
+      { title: "POS Sektöründe Yeni Dönem", category: "Fintech" },
+    ];
 
     // --- KPIs ---
     const totalProviders = allProviders.length;
     const avgCommission = allProviders.reduce((acc, p) => acc + p.commission, 0) / totalProviders;
     const avgRating = allProviders.reduce((acc, p) => acc + p.rating, 0) / totalProviders;
-    const newsCount = newsResponse.total;
+    const newsCount = news.length;
 
     const kpis: Kpi[] = [
       { title: "Toplam Sağlayıcı", value: totalProviders.toString(), change: "+2 son ay", changeType: 'increase' },
@@ -82,7 +86,7 @@ export const getDashboardData = api<void, DashboardData>(
     ];
 
     // --- Commission Trends (Mocked Data) ---
-    const commissionTrends = generateCommissionTrends(allProviders);
+    const commissionTrends = generateCommissionTrends(allProviders as any);
 
     // --- Provider Popularity ---
     const providerPopularity = allProviders
@@ -97,10 +101,10 @@ export const getDashboardData = api<void, DashboardData>(
     }));
 
     // --- Feature Adoption ---
-    const featureAdoption = calculateFeatureAdoption(allProviders);
+    const featureAdoption = calculateFeatureAdoption(allProviders as any);
 
     // --- Industry Insights ---
-    const industryInsights = generateInsights(allProviders, newsResponse.news);
+    const industryInsights = generateInsights(allProviders as any, news as any);
 
     return {
       kpis,

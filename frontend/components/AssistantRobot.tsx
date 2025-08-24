@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { MessageCircle, X, Bot } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -8,18 +8,34 @@ import { Link } from "react-router-dom";
 export default function AssistantRobot() {
   const [isVisible, setIsVisible] = useState(true);
   const [isExpanded, setIsExpanded] = useState(false);
-  const [currentMessage, setCurrentMessage] = useState(0);
+  const [messages, setMessages] = useState<{ sender: string; text: string }[]>([]);
+  const [input, setInput] = useState("");
+  const ws = useRef<WebSocket | null>(null);
   const { t } = useTranslation();
 
-  const messages = t('assistant.messages', { returnObjects: true }) as string[];
-
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentMessage((prev) => (prev + 1) % messages.length);
-    }, 4000);
+    ws.current = new WebSocket("wss://payream.com/ws/chat"); // WebSocket endpoint
+    ws.current.onopen = () => {
+      setMessages((prev) => [...prev, { sender: "assistant", text: t('assistant.welcome') }]);
+    };
+    ws.current.onmessage = (event) => {
+      setMessages((prev) => [...prev, { sender: "assistant", text: event.data }]);
+    };
+    ws.current.onerror = () => {
+      setMessages((prev) => [...prev, { sender: "assistant", text: t('assistant.error') }]);
+    };
+    return () => {
+      ws.current?.close();
+    };
+  }, [t]);
 
-    return () => clearInterval(interval);
-  }, [messages.length]);
+  const sendMessage = () => {
+    if (input.trim() && ws.current?.readyState === 1) {
+      ws.current.send(input);
+      setMessages((prev) => [...prev, { sender: "user", text: input }]);
+      setInput("");
+    }
+  };
 
   const handleToggle = () => {
     setIsExpanded(!isExpanded);
@@ -65,36 +81,24 @@ export default function AssistantRobot() {
             </div>
           </CardHeader>
           <CardContent className="space-y-3">
-            <div className="bg-gray-50 rounded-lg p-3">
-              <p 
-                id="assistant-message"
-                className="text-gray-700 text-sm animate-fade-in"
-                aria-live="polite"
-                aria-atomic="true"
-              >
-                {messages[currentMessage]}
-              </p>
+            <div className="bg-gray-50 rounded-lg p-3 h-48 overflow-y-auto">
+              {messages.map((msg, idx) => (
+                <p key={idx} className={`text-sm ${msg.sender === 'assistant' ? 'text-green-700' : 'text-gray-900'} mb-2`}>
+                  <strong>{msg.sender === 'assistant' ? t('assistant.title') : t('assistant.you')}:</strong> {msg.text}
+                </p>
+              ))}
             </div>
-            <div className="flex gap-2">
-              <Button 
-                size="sm" 
-                asChild 
-                className="bg-green-600 hover:bg-green-700 text-white flex-1 focus:ring-2 focus:ring-green-500 focus:ring-offset-2 focus:ring-offset-white"
-              >
-                <Link to="/chat" aria-label={t('header.chatButton')}>
-                  <MessageCircle className="h-3 w-3 mr-1" aria-hidden="true" />
-                  {t('assistant.chatButton')}
-                </Link>
-              </Button>
-              <Button 
-                size="sm" 
-                variant="outline" 
-                asChild 
-                className="border-gray-300 text-gray-700 hover:bg-gray-50 flex-1 focus:ring-2 focus:ring-green-500 focus:ring-offset-2 focus:ring-offset-white"
-              >
-                <Link to="/search" aria-label={t('header.searchButton')}>
-                  {t('assistant.searchButton')}
-                </Link>
+            <div className="flex gap-2 mt-2">
+              <input
+                type="text"
+                value={input}
+                onChange={e => setInput(e.target.value)}
+                className="flex-1 border rounded px-2 py-1 text-sm"
+                placeholder={t('assistant.inputPlaceholder')}
+                onKeyDown={e => { if (e.key === 'Enter') sendMessage(); }}
+              />
+              <Button size="sm" onClick={sendMessage} className="bg-green-600 text-white">
+                Gönder
               </Button>
             </div>
           </CardContent>
