@@ -1,4 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
+import { useResponsiveFix } from "../hooks/useResponsiveFix";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, LineChart, Line, PieChart, Pie, Cell } from 'recharts';
 import { AlertTriangle, BarChart3, CheckCircle, Info } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -40,6 +41,7 @@ const KpiCard = ({ title, value, change, changeType }: { title: string, value: s
 };
 
 export default function AnalyticsPage() {
+  useResponsiveFix();
   const { t } = useTranslation();
   const { data, isLoading, error } = useQuery<DashboardData>({
     queryKey: ["analyticsDashboard"],

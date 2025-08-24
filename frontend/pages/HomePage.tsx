@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet";
+import { useResponsiveFix } from "../hooks/useResponsiveFix";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Search, MessageCircle, TrendingUp, Shield, Zap, CreditCard, ArrowRight, CheckCircle, Newspaper, BarChart3, Mail, Phone, MapPin, Github, Twitter, Linkedin, Instagram, ExternalLink, Users, Award, Clock, Globe, Building, Lock, Database, Layers, Monitor } from "lucide-react";
@@ -11,6 +12,7 @@ import NewsSection from "../components/NewsSection";
 import Logo from "../components/Logo";
 
 export default function HomePage() {
+  useResponsiveFix();
   const { t } = useTranslation();
 
   const banks = [

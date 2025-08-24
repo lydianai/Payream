@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { useResponsiveFix } from "../hooks/useResponsiveFix";
 import { useMutation } from "@tanstack/react-query";
 import { useTranslation } from "react-i18next";
 import { Send, Bot, User, TrendingUp, DollarSign, Shield, Zap, Search, BarChart3, Clock, Star, Activity, Globe, Cpu, CreditCard, Smartphone, Building, Code, Coins, Lock } from "lucide-react";
@@ -19,6 +20,7 @@ interface Message {
 }
 
 export default function ChatPage() {
+  useResponsiveFix();
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState("");
   const [searchQuery, setSearchQuery] = useState("");
