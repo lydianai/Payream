@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-import { Search, Filter, SlidersHorizontal, Star, TrendingUp, GitCompare, Heart, Plus, MessageSquare } from "lucide-react";
+import { Search, Filter, SlidersHorizontal, Star, TrendingUp, GitCompare, Heart, Plus, MessageSquare, Bot } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
@@ -11,7 +11,7 @@ import { Slider } from "@/components/ui/slider";
 import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
 import { useToast } from "@/components/ui/use-toast";
-import { useSearchQuery, useCategoriesQuery } from "../hooks/useOptimizedQuery";
+import { useSearchQuery, useCategoriesQuery, useChatQuery } from "../hooks/useOptimizedQuery";
 import OptimizedImage from "../components/OptimizedImage";
 import type { POSProvider } from "~backend/pos/search";
 
@@ -26,6 +26,10 @@ export default function SearchPage() {
   const [selectedProviders, setSelectedProviders] = useState<string[]>([]);
   const { t } = useTranslation();
   const { toast } = useToast();
+  const [aiInput, setAiInput] = useState("");
+  const [showAI, setShowAI] = useState(false);
+  const [aiContext, setAiContext] = useState("");
+  const aiQuery = useChatQuery(aiInput, aiContext);
 
   const { data: searchResults, isLoading } = useSearchQuery({
     query: searchTerm, 
@@ -92,7 +96,7 @@ export default function SearchPage() {
           {t('search.title')}
         </h1>
         
-        <form onSubmit={handleSubmit} className="flex gap-4 mb-6" role="search">
+  <form onSubmit={handleSubmit} className="flex gap-4 mb-6" role="search">
           <div className="flex-1 relative">
             <Search 
               className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4" 
@@ -115,6 +119,67 @@ export default function SearchPage() {
             <Search className="h-4 w-4 mr-2" aria-hidden="true" />
             {t('search.searchButton')}
           </Button>
+          <Button
+            type="button"
+            className="bg-blue-600 hover:bg-blue-700 text-white focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-white"
+            aria-label="Finans AI Asistanı"
+            onClick={() => setShowAI(!showAI)}
+          >
+            <Bot className="h-4 w-4 mr-2" aria-hidden="true" />
+            Finans AI
+          </Button>
+      {/* Finans AI Asistanı */}
+      {showAI && (
+        <Card className="bg-blue-50 border-blue-200 mb-6">
+          <CardHeader>
+            <CardTitle className="text-blue-700 text-lg flex items-center">
+              <Bot className="h-5 w-5 mr-2" />
+              Finans AI Asistanı
+            </CardTitle>
+            <CardDescription>
+              Finans, POS, ödeme sistemleri ve dijital bankacılık ile ilgili sorularınızı yazın. Yapay zeka size anında yanıt versin.
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
+            <form
+              onSubmit={e => {
+                e.preventDefault();
+                setAiContext(query || "");
+              }}
+              className="flex gap-2"
+            >
+              <Input
+                type="text"
+                placeholder="Finansal sorunuz..."
+                value={aiInput}
+                onChange={e => setAiInput(e.target.value)}
+                className="flex-1 bg-white border-gray-300 text-gray-900"
+                aria-label="Finansal sorunuz"
+              />
+              <Button
+                type="submit"
+                className="bg-blue-600 hover:bg-blue-700 text-white"
+                disabled={!aiInput.trim() || aiQuery.isPending}
+              >
+                <Bot className="h-4 w-4 mr-2" />
+                Yanıtla
+              </Button>
+            </form>
+            {aiQuery.isPending && (
+              <div className="mt-4 text-blue-600 animate-pulse">Yanıtlanıyor...</div>
+            )}
+            {aiQuery.data && (
+              <div className="mt-4 p-4 bg-white border border-blue-200 rounded text-gray-900">
+                <strong>AI Yanıtı:</strong>
+                <div className="mt-2 whitespace-pre-line">{aiQuery.data.response}</div>
+              </div>
+            )}
+            {aiQuery.error && (
+              <div className="mt-4 text-red-600">Yanıt alınamadı. Lütfen tekrar deneyin.</div>
+            )}
+          </CardContent>
+        </Card>
+      )}
         </form>
 
         {/* Filters */}
