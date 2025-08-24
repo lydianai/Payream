@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Search, MessageCircle, TrendingUp, Shield, Zap, CreditCard, ArrowRight, CheckCircle, Newspaper, BarChart3, Mail, Phone, MapPin, Github, Twitter, Linkedin, Instagram, ExternalLink, Users, Award, Clock, Globe, Building, Lock, Database, Layers, Monitor } from "lucide-react";
@@ -267,7 +268,7 @@ export default function HomePage() {
                 <h4 className="text-lg font-semibold text-gray-900 mb-4 text-center">Güvenlik Altyapısı</h4>
                 <div className="grid md:grid-cols-4 gap-4 text-center">
                   <div className="p-3 bg-green-50 rounded-lg">
-                  import { Helmet } from "react-helmet";
+                  // ...existing code...
                     <Shield className="h-6 w-6 text-green-600 mx-auto mb-2" />
                     <p className="text-sm font-medium text-gray-900">PCI DSS Level 1</p>
                     <p className="text-xs text-gray-600">En yüksek güvenlik standardı</p>
@@ -385,8 +386,8 @@ export default function HomePage() {
                           <meta name="robots" content="index, follow" />
                           <meta name="google-site-verification" content="GOOGLE_VERIFICATION_CODE" />
                           <meta name="bingbot" content="index, follow" />
-                          <link rel="alternate" hreflang="tr" href="https://payream.com/" />
-                          <link rel="alternate" hreflang="en" href="https://payream.com/en" />
+                          <link rel="alternate" hrefLang="tr" href="https://payream.com/" />
+                          <link rel="alternate" hrefLang="en" href="https://payream.com/en" />
                           <script type="application/ld+json">
                             {`
                               {
