@@ -1,5 +1,4 @@
 import { useState } from "react";
-export default function BanksPage() {
 import { Heart } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { Building, Shield, Users, TrendingUp, Star, ExternalLink, Search, Filter, Calendar, MapPin, Phone, Mail, Globe, CreditCard, Zap, Lock, Database, Monitor, CheckCircle, Award, Clock } from "lucide-react";
@@ -10,6 +9,8 @@ import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Progress } from "@/components/ui/progress";
+
+export default function BanksPage() {
 
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("all");
