@@ -1,4 +1,5 @@
 import { useState } from "react";
+export default function BanksPage() {
 import { Heart } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { Building, Shield, Users, TrendingUp, Star, ExternalLink, Search, Filter, Calendar, MapPin, Phone, Mail, Globe, CreditCard, Zap, Lock, Database, Monitor, CheckCircle, Award, Clock } from "lucide-react";
