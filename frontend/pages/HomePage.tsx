@@ -9,6 +9,7 @@ import { Badge } from "@/components/ui/badge";
 import SearchBox from "../components/SearchBox";
 import FeaturedProviders from "../components/FeaturedProviders";
 import NewsSection from "../components/NewsSection";
+import GlobalFinanceNews from "../components/GlobalFinanceNews";
 import Logo from "../components/Logo";
 
 export default function HomePage() {
@@ -511,8 +512,10 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* News Section */}
-      <NewsSection />
+  {/* News Section */}
+  <NewsSection />
+  {/* Dünya Finans Gelişmeleri & Haber Akışı */}
+  <GlobalFinanceNews />
 
       {/* Featured Providers */}
       <section 
