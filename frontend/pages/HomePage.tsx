@@ -885,7 +885,7 @@ export default function HomePage() {
             <div className="mt-6 text-center">
               <p className="text-gray-600 text-sm">
                 © 2025 PAYREAM - {t('footer.copyright')} | {t('footer.developer')}: 
-                <span className="text-green-600 font-medium ml-1">EMRAH SARDAG</span>
+                <span className="text-green-600 font-medium ml-1">AiLydian</span>
               </p>
               <p className="text-gray-500 text-xs mt-2">
                 {t('footer.mission')}
