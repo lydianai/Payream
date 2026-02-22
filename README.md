@@ -1,11 +1,49 @@
-# Payream - Modern Payment Processing Platform
+<div align="center">
 
-> Full-stack payment platform built with React 19, Vite, TypeScript, Tailwind CSS 4, and Encore.dev backend. Multi-gateway integration with real-time transaction tracking and merchant analytics.
+# Payream
 
-[![Status](https://img.shields.io/badge/Status-Active-brightgreen)](https://github.com/lydianai/Payream)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.8-blue)](https://typescriptlang.org)
-[![React](https://img.shields.io/badge/React-19-cyan)](https://react.dev)
-[![License](https://img.shields.io/badge/License-Proprietary-red)](LICENSE)
+<p><em>Modern Payment Processing Platform with Multi-Gateway Integration and Fraud Detection</em></p>
+
+<p>
+  <a href="#overview"><img src="https://img.shields.io/badge/Docs-Overview-blue?style=for-the-badge" alt="Overview"></a>
+  <a href="#architecture"><img src="https://img.shields.io/badge/Docs-Architecture-purple?style=for-the-badge" alt="Architecture"></a>
+  <a href="#key-features"><img src="https://img.shields.io/badge/Docs-Features-green?style=for-the-badge" alt="Features"></a>
+  <a href="#getting-started"><img src="https://img.shields.io/badge/Docs-Setup-orange?style=for-the-badge" alt="Setup"></a>
+</p>
+
+<p>
+  <img src="https://img.shields.io/badge/Status-Active-success?style=flat-square" alt="Status">
+  <img src="https://img.shields.io/badge/License-Proprietary-red?style=flat-square" alt="License">
+  <img src="https://img.shields.io/badge/TypeScript-5.8-3178C6?style=flat-square&logo=typescript" alt="TypeScript">
+  <img src="https://img.shields.io/badge/React-19-61DAFB?style=flat-square&logo=react" alt="React">
+  <img src="https://img.shields.io/badge/PCI--DSS-Compliant-green?style=flat-square" alt="PCI-DSS">
+  <img src="https://img.shields.io/badge/Multi--Gateway-Integration-orange?style=flat-square" alt="Multi-Gateway">
+</p>
+
+<table>
+<tr>
+<td width="50%">
+
+**Platform Highlights**
+- Multi-gateway routing with automatic failover across payment processors
+- Rule-based and behavioral fraud scoring with velocity checks
+- PCI DSS compliant card tokenization with 3D Secure SCA support
+- Real-time transaction monitoring and merchant analytics dashboard
+
+</td>
+<td width="50%">
+
+**Technical Excellence**
+- React 19 + Vite 6.3 frontend with TypeScript strict mode
+- Encore.dev type-safe backend with automatic API generation
+- TanStack Query 5 for live transaction polling
+- Playwright E2E + Vitest unit test coverage for critical payment flows
+
+</td>
+</tr>
+</table>
+
+</div>
 
 ---
 
@@ -74,20 +112,23 @@ graph TD
 
 ## Technology Stack
 
-| Layer | Technology |
-|-------|------------|
-| Frontend Framework | React 19.1, React Router 7 |
-| Language | TypeScript 5.8 |
-| Build Tool | Vite 6.3, Bun |
-| Styling | Tailwind CSS 4, tw-animate-css |
-| UI Components | Radix UI (Avatar, Checkbox, Dropdown, Select, Tabs, Toast) |
-| Data Fetching | TanStack Query 5 |
-| Charts | Recharts 2 |
-| i18n | i18next 25, react-i18next 15 |
-| Icons | Lucide React |
-| Backend | Encore.dev (type-safe API) |
-| Testing | Vitest 3, Playwright, React Testing Library |
-| Package Manager | Bun |
+<div align="center">
+
+| Layer | Technology | Badge |
+|-------|------------|-------|
+| Frontend Framework | React 19.1, React Router 7 | ![React](https://img.shields.io/badge/React-19-61DAFB?style=flat-square&logo=react) |
+| Language | TypeScript 5.8 | ![TypeScript](https://img.shields.io/badge/TypeScript-5.8-3178C6?style=flat-square&logo=typescript) |
+| Build Tool | Vite 6.3, Bun | ![Vite](https://img.shields.io/badge/Vite-6.3-646CFF?style=flat-square&logo=vite) |
+| Styling | Tailwind CSS 4, tw-animate-css | ![Tailwind](https://img.shields.io/badge/Tailwind-4-38B2AC?style=flat-square&logo=tailwind-css) |
+| UI Components | Radix UI | ![Radix](https://img.shields.io/badge/Radix_UI-WCAG_2.1-161618?style=flat-square) |
+| Data Fetching | TanStack Query 5 | ![TanStack](https://img.shields.io/badge/TanStack-Query_5-FF4154?style=flat-square) |
+| Charts | Recharts 2 | ![Recharts](https://img.shields.io/badge/Recharts-2-8884d8?style=flat-square) |
+| i18n | i18next 25, react-i18next 15 | ![i18n](https://img.shields.io/badge/i18next-25-26A69A?style=flat-square) |
+| Backend | Encore.dev (type-safe API) | ![Encore](https://img.shields.io/badge/Encore.dev-type--safe-blue?style=flat-square) |
+| Testing | Vitest 3, Playwright | ![Vitest](https://img.shields.io/badge/Vitest-3-6E9F18?style=flat-square&logo=vitest) |
+| Package Manager | Bun | ![Bun](https://img.shields.io/badge/Bun-1.0+-FBF0DF?style=flat-square&logo=bun) |
+
+</div>
 
 ---
 
@@ -227,5 +268,5 @@ This software is proprietary. See [LICENSE](LICENSE) for details.
 ## Links
 
 - **Main Website**: [www.ailydian.com](https://www.ailydian.com)
-- **Email**: sardagemrah@gmail.com
+- **Email**: [contact@ailydian.com](mailto:contact@ailydian.com)
 - **Security Policy**: [SECURITY.md](SECURITY.md)
