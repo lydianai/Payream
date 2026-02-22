@@ -10,7 +10,7 @@ const wss = new WebSocketServer({ port: 8081 }); // Gerekirse portu ayarlayın
 
 wss.on("connection", (ws) => {
   ws.on("message", async (message: string) => {
-    // OpenAI API ile yanıt al
+    // AI API ile yanıt al
     try {
       const response = await fetch("https://api.openai.com/v1/chat/completions", {
         method: "POST",
@@ -35,7 +35,7 @@ wss.on("connection", (ws) => {
         }),
       });
       if (!response.ok) {
-        ws.send("OpenAI API hatası: " + response.status);
+        ws.send("AI API hatası: " + response.status);
         return;
       }
       const data = await response.json();

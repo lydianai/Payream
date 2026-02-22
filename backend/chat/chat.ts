@@ -56,7 +56,7 @@ Türkiye'deki güncel fintech gelişmelerini takip ediyorsun ve kullanıcılara 
       });
 
       if (!response.ok) {
-        throw new Error(`OpenAI API error: ${response.status}`);
+        throw new Error(`AI API error: ${response.status}`);
       }
 
       const data = await response.json();
